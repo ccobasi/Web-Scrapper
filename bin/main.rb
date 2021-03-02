@@ -5,15 +5,15 @@ class Display
   def front_page
     crawler = Crawler.new
     job = crawler.take_title
-    company = crawler.take_description
+    description = crawler.take_description
     link = crawler.take_link
-  end
 
-  job.each_with_index do |_item, index|
-    puts "==============================================\n"
-    puts "job: #{job[index]}"
-    puts "description:  #{description[index]}"
-    puts "link:  #{link[index]}\n\n"
+    job.each_with_index do |_item, index|
+        puts "==============================================\n"
+        puts "job: #{job[index]}"
+        puts "description:  #{description[index]}"
+        puts "link:  #{link[index]}\n\n"
+  end
   end
 
   def whole_web
@@ -32,8 +32,8 @@ class Display
   end
 end
 
-scrape = Display.new
-scrape.front_page
+# scrape = Display.new
+# scrape.front_page
 
-scrape_all = Display.new
+scrape_all = Web.new
 scrape_all.whole_web

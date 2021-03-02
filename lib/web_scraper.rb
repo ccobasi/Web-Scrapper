@@ -14,7 +14,7 @@ class Crawler
   end
 
   def take_link
-    @parsed_page.css('mag-b.a').map { |link| 'https://www.myjobmag.com' + link['href'] }
+    @parsed_page.css('li.job-list-li.a').map{ |link| 'https://www.myjobmag.com' + link['href'] }
   end
 
   def take_description
