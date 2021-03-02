@@ -15,3 +15,25 @@ class Display
     puts "description:  #{description[index]}"
     puts "link:  #{link[index]}\n\n"
   end
+
+  def whole_web
+    crawler_whole = Web.new
+    job_whole_web = crawler_whole.all_title
+    title_whole_web = crawler_whole.all_description
+    link_whole_web = crawler_whole.all_link
+    
+
+    job_whole_web.each_with_index do |_item, index|
+      puts "==============================================\n"
+      puts "job: #{job_whole_web[index]}"
+      puts "description:  #{description_whole_web[index]}"
+      puts "link:  #{link_whole_web[index]}\n\n"
+    end
+  end
+end
+
+scrape = Display.new
+scrape.front_page
+
+scrape_all = Display.new
+scrape_all.whole_web

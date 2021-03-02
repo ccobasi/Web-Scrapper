@@ -18,7 +18,7 @@ class Crawler
   end
 
   def take_description
-    @parsed_page.css('li.job-desc').css('div._1jqckyi').map(&:text)
+    @parsed_page.css('li.job-desc').map(&:text)
   end
 
 end
