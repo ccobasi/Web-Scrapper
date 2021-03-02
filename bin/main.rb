@@ -4,14 +4,14 @@ require_relative '../lib/whole_web'
 class Display
   def front_page
     crawler = Crawler.new
-    job = crawler.title
-    company = crawler.company
-    link = crawler.link
+    job = crawler.take_title
+    company = crawler.take_description
+    link = crawler.take_link
   end
 
   job.each_with_index do |_item, index|
     puts "==============================================\n"
     puts "job: #{job[index]}"
-    puts "company:  #{company[index]}"
+    puts "description:  #{description[index]}"
     puts "link:  #{link[index]}\n\n"
   end
