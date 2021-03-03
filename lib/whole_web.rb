@@ -4,7 +4,6 @@ require 'byebug'
 
 class Web
   def initialize
-    # job_listing = parsed_page.css('li.job-list-li')
     page_number = 22
     while page_number <= 40
       @ur_first = 'https://www.myjobmag.com/search/jobs?q=software+engineer'
@@ -18,10 +17,6 @@ class Web
 
   def all_title
     @parsed_page.css('li.job-list-li').map(&:text)
-  end
-
-  def all_link
-    @parsed_page.css('mag-b.a').map { |link| 'https://www.myjobmag.com' + link['href'] }
   end
 
   def all_description
