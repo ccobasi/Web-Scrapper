@@ -2,16 +2,18 @@
 
 # Web Scraper
 
+# Web Scraper
+
 This is an application designed to simplify the process of retrieving data from specified websites. It scrapes desired information off web pages by parsing the HTML content of the pages.
 
-In this case, Myjobmag was used as the designated website where specific data is to retrieved. The scraper has been designed to focus on job listings in Nigeria.
+In this case, Myjobmag was used as the designated website where specific data is to retrieve. The scraper has been designed to focus on job listings in Nigeria.
 
 The following are the specific data this application has been designed to retrieve from Myjobmag.
 - Job title.
 - Job description.
 
 
-These are vital information are for personal used. The information provided are in real time which gets updated as new listings are added to the website.
+These are vital information is for personal used. The information provided are in real time which gets updated as new listings are added to the website.
 ![screenshot](./screenshot.png)
 ## Tools and Technologies
 ### Ruby
@@ -30,7 +32,7 @@ Nokogiri is an open source software library to parse HTML and XML in Ruby. It de
 - Go to the "Code" section of this repository and press the green button that says "Code". Copy the URL or the SSH key.
 - Go to the terminal and enter:
 ```
-git clone URL/SSH key
+Git clone URL/SSH key
 ```
 - If you don't have git you can download this project and unzip it.
 - Change directory into the folder the application is saved.
@@ -38,7 +40,7 @@ git clone URL/SSH key
 ```
 bundle install
 ```
-- From the root directory(RUBY-BOT), change directory into the bin directory by running the following to get the above specified data in real time:
+- From the root directory (RUBY-BOT), change directory into the bin directory by running the following to get the above specified data in real time:
 ```
 ruby bin/main.rb
 ```
@@ -46,7 +48,7 @@ ruby bin/main.rb
 
 ## Author
 
-George Gbenle
+Chukwuma Obasi
 
 - GitHub: [ccobasi](https://github.com/ccobasi)
 - twitter: [@ObasiChux](https://twitter.com/ChukwumaObasi)
