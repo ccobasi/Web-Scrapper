@@ -10,7 +10,7 @@ class Crawler
   end
 
   def take_title
-    @parsed_page.css('li.job-list-li').map(&:text)
+    @parsed_page.css('li.mag-b').map(&:text)
   end
 
   def take_description
