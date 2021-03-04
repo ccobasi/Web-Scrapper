@@ -4,13 +4,19 @@ require 'byebug'
 
 class Web
   def initialize
+    @url = 'https://www.myjobmag.com/search/jobs?q=software+engineer'
+  end
+
+  def parse_url
+    @ur = "#{@ur_first}#{page_number}#{@ur_last}"
+    unparsed_page = HTTParty.get(@ur)
+    @parsed_page = Nokogiri::HTML(unparsed_page.body)
+
     page_number = 22
+
     while page_number <= 40
       @ur_first = 'https://www.myjobmag.com/search/jobs?q=software+engineer'
       @ur_last = '&currentpage=21'
-      @ur = "#{@ur_first}#{page_number}#{@ur_last}"
-      unparsed_page = HTTParty.get(@ur)
-      @parsed_page = Nokogiri::HTML(unparsed_page.body)
       page_number += 22
     end
   end
