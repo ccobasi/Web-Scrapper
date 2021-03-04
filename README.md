@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# ruby-bot
+# Web Scraper
 
 This is an application designed to simplify the process of retrieving data from specified websites. It scrapes desired information off web pages by parsing the HTML content of the pages.
 
